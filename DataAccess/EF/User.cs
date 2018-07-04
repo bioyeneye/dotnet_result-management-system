@@ -1,6 +1,3 @@
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-
 namespace DataAccess.EF
 {
     using System;
@@ -12,10 +9,6 @@ namespace DataAccess.EF
     [Table("User")]
     public partial class User
     {
-        public User()
-        {
-            CreatedAt = DateTime.UtcNow;
-        }
         public int Id { get; set; }
 
         [Required]
@@ -34,5 +27,9 @@ namespace DataAccess.EF
 
         [Column(TypeName = "date")]
         public DateTime CreatedAt { get; set; }
+
+        public bool IsAdmin { get; set; }
+
+        public bool IsActiveEO { get; set; }
     }
 }

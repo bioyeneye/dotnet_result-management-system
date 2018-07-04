@@ -2,9 +2,11 @@ using System;
 using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace DataAccess.BaseRepository
 {
+
     public class EntityFrameworkDataContext : DbContext, IDataContextAsync
     {
         #region Private Fields

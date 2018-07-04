@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using DataAccess.BaseRepository;
 using DataAccess.EF;
@@ -8,39 +9,42 @@ using Model.ViewModel;
 
 namespace BusinessLogic.Services
 {
-    public interface ISemeterService
+    public interface ISemesterService
     {
-        IEnumerable<SemeterItem> GetCount();
-        void Create(SemeterModel model, int currentUserId);
+        IEnumerable<SemesterItem> GetCount();
+        void Create(SemesterModel model, int currentUserId);
         void Delete(int id);
-        void Update(SemeterModel model, int currentUserId);
-        SemeterItem GetItem(int id);
-        SemeterModel GetSemeter(int userId);
-        SemeterDetail GetDetail(int id);
-        bool NameExist(SemeterModel unit);
+        void Update(SemesterModel model, int currentUserId);
+        SemesterItem GetItem(int id);
+        SemesterModel GetSemester(int userId);
+        SemesterDetail GetDetail(int id);
+        bool NameExist(SemesterModel unit);
+
+
+        int GetSemesterId(string name);
     }
-    public class SemeterService : ISemeterService
+    public class SemesterService : ISemesterService
     {
         private readonly IUnitOfWorkAsync _unitOfWork;
         private readonly ISemesterRepository _semesterRepository;
 
-        public IEnumerable<SemeterItem> GetCount()
+        public IEnumerable<SemesterItem> GetCount()
         {
             return ProcessQuery(_semesterRepository.Table);
         }
-        public SemeterService(IUnitOfWorkAsync unitOfWork, ISemesterRepository repository)
+        public SemesterService(IUnitOfWorkAsync unitOfWork, ISemesterRepository repository)
         {
             _unitOfWork = unitOfWork;
             _semesterRepository = repository;
 
         }
 
-        public void Create(SemeterModel model, int currentUserId)
+        public void Create(SemesterModel model, int currentUserId)
         {
             try
             {
                 _unitOfWork.BeginTransaction();
-                var entity = Mapper.Map<SemeterModel, Semeter>(model);
+                var entity = Mapper.Map<SemesterModel, Semeter>(model);
                 entity.CreatedAt = DateTime.Now;
                 _semesterRepository.Insert(entity);
                 _unitOfWork.Commit();
@@ -56,7 +60,7 @@ namespace BusinessLogic.Services
             try
             {
                 _unitOfWork.BeginTransaction();
-                var entity = GetSemeterEntity(id);
+                var entity = GetSemesterEntity(id);
                 _semesterRepository.Delete(entity);
                 _unitOfWork.Commit();
             }
@@ -67,29 +71,29 @@ namespace BusinessLogic.Services
             }
         }
 
-        public SemeterDetail GetDetail(int id)
+        public SemesterDetail GetDetail(int id)
         {
-            var entity = GetSemeterEntity(id);
-            return Mapper.Map<Semeter, SemeterDetail>(entity);
+            var entity = GetSemesterEntity(id);
+            return Mapper.Map<Semeter, SemesterDetail>(entity);
         }
 
-        public SemeterItem GetItem(int id)
+        public SemesterItem GetItem(int id)
         {
-            var entity = GetSemeterEntity(id);
-            return Mapper.Map<Semeter, SemeterItem>(entity);
+            var entity = GetSemesterEntity(id);
+            return Mapper.Map<Semeter, SemesterItem>(entity);
         }
-        private static IEnumerable<SemeterItem> ProcessQuery(IEnumerable<Semeter> entities)
+        private static IEnumerable<SemesterItem> ProcessQuery(IEnumerable<Semeter> entities)
         {
-            return Mapper.Map<IEnumerable<Semeter>, IEnumerable<SemeterItem>>(entities);
+            return Mapper.Map<IEnumerable<Semeter>, List<SemesterItem>>(entities);
         }
 
-        public void Update(SemeterModel model, int currentUserId)
+        public void Update(SemesterModel model, int currentUserId)
         {
 
             try
             {
                 _unitOfWork.BeginTransaction();
-                var userProfile = GetSemeterEntity(model.Id);
+                var userProfile = GetSemesterEntity(model.Id);
                 Mapper.Map(model, userProfile);
                 _semesterRepository.Update(userProfile);
                 _unitOfWork.Commit();
@@ -100,20 +104,29 @@ namespace BusinessLogic.Services
                 throw new Exception(ex.Message);
             }
         }
-        private Semeter GetSemeterEntity(int id)
+        private Semeter GetSemesterEntity(int id)
         {
             return _semesterRepository.Find(id);
 
         }
-        public SemeterModel GetSemeter(int userId)
+        public SemesterModel GetSemester(int userId)
         {
-            var entity = GetSemeterEntity(userId);
-            return Mapper.Map<Semeter, SemeterModel>(entity);
+            var entity = GetSemesterEntity(userId);
+            return Mapper.Map<Semeter, SemesterModel>(entity);
         }
 
-        public bool NameExist(SemeterModel brand)
+        public bool NameExist(SemesterModel model)
         {
-            return _semesterRepository.NameExist(brand);
+            return _semesterRepository.NameExist(model);
+        }
+
+        public int GetSemesterId(string name)
+        {
+            var id = _semesterRepository.Table.FirstOrDefault(c => c.Name == name)?.Id;
+            if (id != null)
+                return (int)id;
+
+            return 0;
         }
     }
 }

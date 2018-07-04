@@ -61,8 +61,8 @@
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(1037, 439);
             this.radGridView1.TabIndex = 1;
-            this.radGridView1.Text = "radGridView1";
             this.radGridView1.ThemeName = "TelerikMetro";
+            this.radGridView1.Click += new System.EventHandler(this.radGridView1_Click);
             // 
             // backgroundWorker1
             // 
@@ -77,6 +77,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -1,18 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Model.ViewModel;
 using RMS.Controllers;
+using RMS.Model;
 using RMS.View.Admin;
+using RMS.View.SuperAdmin;
+using RMS.ViewHelper;
 using Telerik.WinControls.UI;
 
 namespace RMS.View
 {
     public partial class AuthForm : RadForm
     {
-        private readonly AccountController _accountController;
-        public AuthForm(AccountController accountControl)
+        //private readonly AccountController _accountController;
+        private AccountNewController _accountNewController;
+        public AuthForm(AccountNewController accountControl)
         {
-            _accountController = accountControl;
+            _accountNewController = accountControl;
             InitializeComponent();
         }
 
@@ -23,29 +29,64 @@ namespace RMS.View
 
         private void chkShowPassword_ToggleStateChanged(object sender, StateChangedEventArgs args)
         {
-            _accountController.ShowPassword(txtPassword, chkShowPassword.CheckState != CheckState.Checked);
+            _accountNewController.ShowPassword(txtPassword, chkShowPassword.CheckState != CheckState.Checked);
         }
 
         private void btnAuthenticate_Click(object sender, EventArgs e)
         {
-            var model = new UserModel
+            LoginViewModel model = new LoginViewModel()
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text
             };
 
-            var result = _accountController.Authenticate(model);
-            if (!result.Success)
+            if (TextHelper.ContainsValue(new List<string> {model.Username, model.Password}))
             {
-                lblError.Text = (string)result.Data;
+                lblError.Text = @"Ensure fields are filled";
+                return;
             }
-            else
+
+            var applicationUser = _accountNewController.Authenticate(model);
+            if (applicationUser == null)
             {
-                AdminMainForm adminMainForm = new AdminMainForm();
-                adminMainForm.Show();
-                Hide();
+                lblError.Text = @"Login credential is wrong";
+                return;
             }
+
+            var role = _accountNewController.UserRole(applicationUser);
+
+            switch (role)
+            {
+                case RolesConstants.Enum.SuperAdmin:
+                    SuperAdminView();
+                    break;
+
+                case RolesConstants.Enum.Admin:
+                    ShowAdminView();
+                    break;
+            }
+
+
+
         }
 
+        private void SuperAdminView()
+        {
+            SuperAdminMainForm adminMainForm = new SuperAdminMainForm();
+            adminMainForm.Show();
+            Hide();
+        }
+
+        private void ShowAdminView()
+        {
+            var eoMainForm = new EoMainForm();
+            eoMainForm.Show();
+            Hide();
+        }
+
+        private void AuthForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

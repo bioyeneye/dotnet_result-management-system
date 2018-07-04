@@ -7,5 +7,6 @@ namespace DataAccess.BaseRepository
     {
         Task<int> SaveChangesAsync();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        IRepositoryAsync<TEntity> GetRepositoryAsync<TEntity>() where TEntity : class;
     }
 }

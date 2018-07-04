@@ -9,10 +9,12 @@ namespace DataAccess.EF
     [Table("Semeter")]
     public partial class Semeter
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Semeter()
         {
-            CreatedAt = DateTime.UtcNow;
+            Courses = new HashSet<Course>();
         }
+
         public int Id { get; set; }
 
         [Required]
@@ -20,5 +22,8 @@ namespace DataAccess.EF
         public string Name { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Course> Courses { get; set; }
     }
 }

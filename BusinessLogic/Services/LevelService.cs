@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using DataAccess.BaseRepository;
 using DataAccess.EF;
@@ -18,6 +19,7 @@ namespace BusinessLogic.Services
         LevelModel GetLevel(int userId);
         LevelDetail GetDetail(int id);
         bool NameExist(LevelModel unit);
+        LevelItem GetLevelId(string name);
     }
     public class LevelService : ILevelService
     {
@@ -26,7 +28,7 @@ namespace BusinessLogic.Services
 
         public IEnumerable<LevelItem> GetCount()
         {
-            return ProcessQuery(_levelRepository.Table);
+            return ProcessQuery(_levelRepository.Table.ToList());
         }
         public LevelService(IUnitOfWorkAsync unitOfWork, ILevelRepository repository)
         {
@@ -76,11 +78,30 @@ namespace BusinessLogic.Services
         public LevelItem GetItem(int id)
         {
             var entity = GetLevelEntity(id);
-            return Mapper.Map<Level, LevelItem>(entity);
+            var item =  Mapper.Map<Level, LevelItem>(entity);
+            item.SectionModels = Mapper.Map<IEnumerable<Section>, List<SectionModel>>(entity.Sections).ToList();
+            return item;
         }
         private static IEnumerable<LevelItem> ProcessQuery(IEnumerable<Level> entities)
         {
-            return Mapper.Map<IEnumerable<Level>, IEnumerable<LevelItem>>(entities);
+            var levelItem = entities.Select(c =>
+            {
+                var item = Mapper.Map<Level, LevelItem>(c);
+                item.SectionModels = Mapper.Map<IEnumerable<Section>, List<SectionModel>>(c.Sections).ToList();
+                /*item.SectionModels = c.Sections.Select(s => new SectionModel()
+                {
+                    Id = s.Id,
+                    LevelId = s.LevelId,
+                    Name = s.Name,
+                    IsActive = s.IsActive,
+                    CreatedAt = s.CreatedAt
+                }).ToList();*/
+                return item;
+
+            });
+
+            return levelItem;
+            //return Mapper.Map<IEnumerable<Level>, List<LevelItem>>(entities);
         }
 
         public void Update(LevelModel model, int currentUserId)
@@ -114,6 +135,15 @@ namespace BusinessLogic.Services
         public bool NameExist(LevelModel brand)
         {
             return _levelRepository.NameExist(brand);
+        }
+
+        public LevelItem GetLevelId(string name)
+        {
+            var entity = _levelRepository.Table.FirstOrDefault(c => c.Name == name);
+            var item =  Mapper.Map<Level, LevelItem>(entity);
+            if(entity!= null)
+                item.SectionModels = Mapper.Map<IEnumerable<Section>, List<SectionModel>>(entity?.Sections);
+            return item;
         }
     }
 }

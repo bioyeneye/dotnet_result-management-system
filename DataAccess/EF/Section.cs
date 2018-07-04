@@ -12,8 +12,9 @@ namespace DataAccess.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Section()
         {
+            Results = new HashSet<Result>();
             Students = new HashSet<Student>();
-            CreatedAt = DateTime.UtcNow;
+            StudentCourseAssigns = new HashSet<StudentCourseAssign>();
         }
 
         public int Id { get; set; }
@@ -25,7 +26,19 @@ namespace DataAccess.EF
         [Column(TypeName = "date")]
         public DateTime CreatedAt { get; set; }
 
+        public bool IsActive { get; set; }
+
+        public int LevelId { get; set; }
+
+        public virtual Level Level { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Result> Results { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudentCourseAssign> StudentCourseAssigns { get; set; }
     }
 }

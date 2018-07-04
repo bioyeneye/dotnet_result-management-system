@@ -70,12 +70,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utitlitise\NameAndValue.cs" />
+    <Compile Include="ViewModel\ResultModel.cs" />
+    <Compile Include="ViewModel\SemesterModel.cs" />
+    <Compile Include="ViewModel\CourseModel.cs" />
     <Compile Include="ViewModel\LevelModel.cs" />
     <Compile Include="ViewModel\SectionModel.cs" />
-    <Compile Include="ViewModel\SemeterModel.cs" />
     <Compile Include="ViewModel\StudentModel.cs" />
+    <Compile Include="ViewModel\AspNetUserModel.cs" />
     <Compile Include="ViewModel\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>

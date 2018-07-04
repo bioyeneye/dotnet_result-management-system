@@ -1,0 +1,606 @@
+2018-05-23 12:42:46,207 [9] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at RMS.View.SuperAdmin.Course.ListForm.btnAddCourse_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ListForm.cs:line 27
+
+2018-05-23 12:57:38,124 [9] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+
+System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at RMS.View.SuperAdmin.Course.ListForm.btnAddCourse_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ListForm.cs:line 27
+
+2018-05-23 18:10:41,913 [9] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: Access to the path 'C:\Users\Public\Desktop\course.csv' is denied.
+
+System.UnauthorizedAccessException: Access to the path 'C:\Users\Public\Desktop\course.csv' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents)
+   at RMS.Model.CsvExport`1.ExportToFile(String path) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\Model\CsvExport.cs:line 122
+   at RMS.View.SuperAdmin.Course.ProcessBulkForm.btnDownloadTemplate_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ProcessBulkForm.cs:line 46
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Course.ListForm.btnBulkCourse_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ListForm.cs:line 68
+
+2018-05-23 19:22:44,631 [9] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: The process cannot access the file 'C:\Users\Silveredge\Desktop\course.csv' because it is being used by another process.
+
+System.Exception: The process cannot access the file 'C:\Users\Silveredge\Desktop\course.csv' because it is being used by another process.
+   at RMS.Model.FileHelper.GetDataFromFile(String fileSavePath) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\Model\FileHelper.cs:line 23
+   at RMS.View.SuperAdmin.Course.ProcessBulkForm.btnUpload_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ProcessBulkForm.cs:line 54
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Course.ListForm.btnBulkCourse_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ListForm.cs:line 68
+
+2018-05-25 16:17:50,051 [9] ERROR RMS.View.SuperAdmin.Course.ListForm - Error Message: Value cannot be null.
+Parameter name: entity
+System.Exception: Value cannot be null.
+Parameter name: entity
+   at BusinessLogic.Services.CourseService.Update(CourseModel model, Int32 currentUserId) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\CourseService.cs:line 103
+   at RMS.View.SuperAdmin.Course.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\NewForm.cs:line 104
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Course.ListForm.btnEdit_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Course\ListForm.cs:line 89
+
+2018-05-25 21:48:42,421 [9] ERROR RMS.View.SuperAdmin.Session.ListForm - Error Message: The underlying provider failed on Rollback.
+System.Data.Entity.Core.EntityException: The underlying provider failed on Rollback. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: connection
+   at System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   at System.Data.Entity.Infrastructure.Interception.DbTransactionInterceptionContext.WithConnection(DbConnection connection)
+   at System.Data.Entity.Infrastructure.Interception.DbTransactionDispatcher.Rollback(DbTransaction transaction, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.Core.EntityClient.EntityTransaction.Rollback()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.EntityTransaction.Rollback()
+   at DataAccess.BaseRepository.EntityFrameorkUnitOfWork.Rollback() in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\DataAccess\BaseRepository\EntityFrameorkUnitOfWork.cs:line 110
+   at BusinessLogic.Services.SectionService.Create(SectionModel model, Int32 currentUserId) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\SectionService.cs:line 57
+   at RMS.View.SuperAdmin.Session.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\NewForm.cs:line 72
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Session.ListForm.btnAddSession_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\ListForm.cs:line 53
+
+2018-05-25 21:52:39,450 [9] ERROR RMS.View.SuperAdmin.Session.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.SectionService.Create(SectionModel model, Int32 currentUserId) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\SectionService.cs:line 58
+   at RMS.View.SuperAdmin.Session.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\NewForm.cs:line 72
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Session.ListForm.btnAddSession_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\ListForm.cs:line 53
+
+2018-05-25 21:55:45,109 [9] ERROR RMS.View.SuperAdmin.Session.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.SectionService.Create(SectionModel model, Int32 currentUserId) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\SectionService.cs:line 58
+   at RMS.View.SuperAdmin.Session.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\NewForm.cs:line 72
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Session.ListForm.btnAddSession_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\ListForm.cs:line 53
+
+2018-05-25 22:04:50,587 [9] ERROR RMS.View.SuperAdmin.Session.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.SectionService.Create(SectionModel model, Int32 currentUserId) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\SectionService.cs:line 58
+   at RMS.View.SuperAdmin.Session.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\NewForm.cs:line 72
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Session.ListForm.btnAddSession_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\Session\ListForm.cs:line 53
+
+2018-05-27 06:23:20,588 [9] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.AspNetUserService.Create(AspNetUserModel model) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\AspNetUserService.cs:line 68
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.ClassRep.ListForm.btnAddRep_Click(Object sender, EventArgs e)
+
+2018-05-27 07:15:04,664 [8] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.AspNetUserService.Create(AspNetUserModel model) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\AspNetUserService.cs:line 68
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\NewForm.cs:line 81
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.ClassRep.ListForm.btnAddRep_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\ListForm.cs:line 60
+
+2018-05-27 07:21:50,200 [8] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.AspNetUserService.Create(AspNetUserModel model) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\AspNetUserService.cs:line 68
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.ClassRep.ListForm.btnAddRep_Click(Object sender, EventArgs e)
+
+2018-05-27 07:27:20,419 [8] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.AspNetUserService.Create(AspNetUserModel model)
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.ClassRep.ListForm.btnAddRep_Click(Object sender, EventArgs e)
+
+2018-05-27 07:37:47,272 [9] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: The entity type IdentityUserRole is not part of the model for the current context.
+System.Exception: The entity type IdentityUserRole is not part of the model for the current context.
+   at BusinessLogic.Services.AspNetUserService.Create(AspNetUserModel model) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\AspNetUserService.cs:line 70
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\NewForm.cs:line 81
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.ClassRep.ListForm.btnAddRep_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\ListForm.cs:line 60
+
+2018-05-27 18:35:50,471 [10] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: The process cannot access the file 'C:\Users\Silveredge\Desktop\student.csv' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'C:\Users\Silveredge\Desktop\student.csv' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents)
+   at RMS.Model.CsvExport`1.ExportToFile(String path)
+   at RMS.View.SuperAdmin.Student.ProcessBulkForm.btnDownloadTemplate_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at Telerik.WinControls.RadControl.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonBase.buttonElement_Click(Object sender, EventArgs e)
+   at Telerik.WinControls.RadElement.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonItem.OnClick(EventArgs e)
+   at Telerik.WinControls.UI.RadButtonElement.OnClick(EventArgs e)
+   at Telerik.WinControls.RadElement.DoClick(EventArgs e)
+   at Telerik.WinControls.RadElement.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadItem.RaiseBubbleEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.RaiseRoutedEvent(RadElement sender, RoutedEventArgs args)
+   at Telerik.WinControls.RadElement.DoMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.ComponentInputBehavior.OnMouseUp(MouseEventArgs e)
+   at Telerik.WinControls.RadControl.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at Telerik.WinControls.RadControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at RMS.View.SuperAdmin.Student.ListForm.btnBulkCourse_Click(Object sender, EventArgs e)
+
+2018-05-27 23:36:00,470 [9] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.AspNetUserService.Update(AspNetUserModel model, Int32 currentAspNetUserId)
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\NewForm.cs:line 100
+
+2018-05-27 23:36:25,845 [9] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.AspNetUserService.Update(AspNetUserModel model, Int32 currentAspNetUserId)
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\NewForm.cs:line 100
+
+2018-05-27 23:48:59,232 [9] ERROR RMS.View.SuperAdmin.ClassRep.ListForm - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.AspNetUserService.Update(AspNetUserModel model, Int32 currentAspNetUserId)
+   at RMS.View.SuperAdmin.ClassRep.NewForm.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\SuperAdmin\ClassRep\NewForm.cs:line 100
+
+2018-06-23 09:54:43,158 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 148
+
+2018-06-23 10:12:20,068 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Value cannot be null.
+Parameter name: source
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 148
+
+2018-06-23 10:13:57,500 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Value cannot be null.
+Parameter name: source
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 148
+
+2018-06-23 10:15:28,314 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results)
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 159
+
+2018-06-23 10:16:47,574 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results)
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 159
+
+2018-06-23 16:23:18,600 [9] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Exception: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results)
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e)
+
+2018-06-23 17:41:49,340 [10] ERROR RMS.View.Admin.Result.SingleStudentResult - Error Message: An error occurred while updating the entries. See the inner exception for details.
+System.Exception: An error occurred while updating the entries. See the inner exception for details.
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\ResultService.cs:line 106
+   at RMS.View.Admin.Result.SingleStudentResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\SingleStudentResult.cs:line 185
+
+2018-06-23 20:44:26,091 [10] ERROR RMS.View.Admin.Result.SingleStudentCourseResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.SingleStudentCourseResult.btnSave_Click(Object sender, EventArgs e)
+
+2018-06-23 20:44:55,434 [10] ERROR RMS.View.Admin.Result.SingleStudentCourseResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.SingleStudentCourseResult.btnSave_Click(Object sender, EventArgs e)
+
+2018-06-23 20:46:51,724 [10] ERROR RMS.View.Admin.Result.SingleStudentCourseResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.SingleStudentCourseResult.btnSave_Click(Object sender, EventArgs e)
+
+2018-06-24 05:55:31,525 [9] ERROR RMS.View.Admin.Result.Process.SingleStudentCourseResult - Error Message: The process cannot access the file 'C:\Users\Silveredge\Desktop\ResultSingleCourse.csv' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'C:\Users\Silveredge\Desktop\ResultSingleCourse.csv' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents)
+   at RMS.Model.CsvExport`1.ExportToFile(String path) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\Model\CsvExport.cs:line 122
+   at RMS.View.Admin.Result.Process.AllStudentCourseResult.btnDownloadTemplate_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\Process\AllStudentCourseResult.cs:line 75
+
+2018-06-24 07:46:36,607 [10] ERROR RMS.View.Admin.Result.Process.SingleStudentCourseResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.Process.AllStudentCourseResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\Process\AllStudentCourseResult.cs:line 158
+
+2018-06-24 07:47:30,842 [10] ERROR RMS.View.Admin.Result.Process.SingleStudentCourseResult - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.Process.AllStudentCourseResult.btnSaveResult_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\Process\AllStudentCourseResult.cs:line 158
+
+2018-06-24 09:55:55,535 [9] ERROR RMS.View.Admin.Result.Process.SingleStudentCourseResult - Error Message: Data binding directly to a store query (DbSet, DbQuery, DbSqlQuery, DbRawSqlQuery) is not supported. Instead populate a DbSet with data, for example by calling Load on the DbSet, and then bind to local data. For WPF bind to DbSet.Local. For WinForms bind to DbSet.Local.ToBindingList(). For ASP.NET WebForms you can bind to the result of calling ToList() on the query or use Model Binding, for more information see http://go.microsoft.com/fwlink/?LinkId=389592.
+System.NotSupportedException: Data binding directly to a store query (DbSet, DbQuery, DbSqlQuery, DbRawSqlQuery) is not supported. Instead populate a DbSet with data, for example by calling Load on the DbSet, and then bind to local data. For WPF bind to DbSet.Local. For WinForms bind to DbSet.Local.ToBindingList(). For ASP.NET WebForms you can bind to the result of calling ToList() on the query or use Model Binding, for more information see http://go.microsoft.com/fwlink/?LinkId=389592.
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.ComponentModel.IListSource.GetList()
+   at System.Windows.Forms.CurrencyManager.SetDataSource(Object dataSource)
+   at System.Windows.Forms.CurrencyManager..ctor(Object dataSource)
+   at System.Windows.Forms.BindingContext.EnsureListManager(Object dataSource, String dataMember)
+   at System.Windows.Forms.BindingContext.get_Item(Object dataSource)
+   at Telerik.WinControls.Data.RadListSource`1.ShouldChangeDataMember(Object newDataSource)
+   at Telerik.WinControls.Data.RadListSource`1.set_DataSource(Object value)
+   at Telerik.WinControls.UI.GridViewTemplate.set_DataSource(Object value)
+   at Telerik.WinControls.UI.RadGridView.set_DataSource(Object value)
+   at RMS.View.Admin.Result.View.AllSingleCourse.btnShowResult_Click(Object sender, EventArgs e)
+
+2018-06-24 12:31:57,633 [8] ERROR RMS.View.Admin.Result.Process.SingleStudentCourseResult - Error Message: Attaching an entity of type 'DataAccess.EF.Result' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.Exception: Attaching an entity of type 'DataAccess.EF.Result' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   at BusinessLogic.Services.ResultService.UpdateBulk(List`1 resultModels) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\ResultService.cs:line 179
+   at RMS.View.Admin.Result.View.AllSingleCourse.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\View\AllSingleCourse.cs:line 150
+
+2018-06-24 17:50:38,419 [10] ERROR RMS.View.Admin.Result.View.AllCourseStudent - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.View.AllCourseStudent.btnUpload_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\View\AllCourseStudent.cs:line 68
+
+2018-06-24 17:51:16,426 [10] ERROR RMS.View.Admin.Result.View.AllCourseStudent - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.View.AllCourseStudent.btnUpload_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\View\AllCourseStudent.cs:line 68
+
+2018-06-25 09:17:07,796 [10] ERROR RMS.View.Admin.Result.Process.PerSemesterNonBulk - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e)
+
+2018-06-25 10:15:19,499 [10] ERROR RMS.View.Admin.Result.Process.PerSemesterNonBulk - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\Process\PerSemesterNonBulk.cs:line 156
+
+2018-06-25 10:17:08,755 [10] ERROR RMS.View.Admin.Result.Process.PerSemesterNonBulk - Error Message: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e)
+
+2018-06-25 11:00:02,768 [9] ERROR RMS.View.Admin.Result.Process.PerSemesterNonBulk - Error Message: Value cannot be null.
+Parameter name: entity
+System.Exception: Value cannot be null.
+Parameter name: entity
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\ResultService.cs:line 113
+   at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\RMS\View\Admin\Result\Process\PerSemesterNonBulk.cs:line 177
+
+2018-06-25 11:03:23,630 [9] ERROR RMS.View.Admin.Result.Process.PerSemesterNonBulk - Error Message: Value cannot be null.
+Parameter name: entity
+System.Exception: Value cannot be null.
+Parameter name: entity
+   at BusinessLogic.Services.ResultService.CreateBulk(List`1 results) in C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\BusinessLogic\Services\ResultService.cs:line 113
+   at RMS.View.Admin.Result.Process.PerSemesterNonBulk.btnSave_Click(Object sender, EventArgs e)

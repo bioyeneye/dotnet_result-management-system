@@ -7,7 +7,7 @@ namespace DataAccess.BaseRepository
     {
         int SaveChanges();
         void Dispose(bool disposing);
-        //IRepository<TEntity> GetRepository<TEntity>() where TEntity : class;
+        IRepository<TEntity> GetRepository<TEntity>() where TEntity : class;
         void BeginTransaction(IsolationLevel isolationLevel = IsolationLevel.Unspecified);
         bool Commit();
         void Rollback();

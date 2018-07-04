@@ -170,6 +170,7 @@ namespace DataAccess.BaseRepository
 
         public virtual void UpdateRange(IEnumerable<TEntity> entities, bool save = true)
         {
+
             if (save)
                 SaveChanges();
         }
@@ -192,6 +193,11 @@ namespace DataAccess.BaseRepository
         public virtual void Clear()
         {
 
+        }
+
+        public virtual IRepository<T> GetRepository<T>() where T : class
+        {
+            return _unitOfWork.GetRepository<T>();
         }
     }
 }

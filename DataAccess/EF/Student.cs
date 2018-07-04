@@ -9,12 +9,6 @@ namespace DataAccess.EF
     [Table("Student")]
     public partial class Student
     {
-        public Student()
-        {
-            CreatedAt = DateTime.UtcNow;
-
-        }
-
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
@@ -22,9 +16,7 @@ namespace DataAccess.EF
 
         public int LevelId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string MatricNumber { get; set; }
+        public int MatricNumber { get; set; }
 
         [Required]
         [StringLength(50)]

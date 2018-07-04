@@ -11,7 +11,6 @@ namespace DataAccess.BaseRepository
         TEntity Find(params object[] keyValues);
         TEntity Find(Expression<Func<TEntity, bool>> predicate);
         void Insert(TEntity entity, bool save = true);
-
         void InsertRange(IEnumerable<TEntity> entities, bool save = true);
         void Update(TEntity entity, bool save = true);
         void UpdateRange(IEnumerable<TEntity> entities, bool save = true);
@@ -21,7 +20,7 @@ namespace DataAccess.BaseRepository
         void Clear();
         IQueryable<TEntity> Queryable();
         IQueryable<TEntity> Table { get; }
-       // IRepository<T> GetRepository<T>() where T : class;
+        IRepository<T> GetRepository<T>() where T : class;
 
     }
 }

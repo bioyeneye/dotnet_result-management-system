@@ -54,6 +54,9 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -79,15 +82,27 @@
     <Compile Include="BaseRepository\IUnitOfWork.cs" />
     <Compile Include="BaseRepository\IUnitOfWorkAsync.cs" />
     <Compile Include="BaseRepository\Repository.cs" />
+    <Compile Include="BaseRepository\IRepository.cs" />
+    <Compile Include="EF\AspNetRole.cs" />
+    <Compile Include="EF\AspNetUser.cs" />
+    <Compile Include="EF\AspNetUserClaim.cs" />
+    <Compile Include="EF\AspNetUserLogin.cs" />
+    <Compile Include="EF\Course.cs" />
+    <Compile Include="EF\C__MigrationHistory.cs" />
+    <Compile Include="EF\Grade.cs" />
     <Compile Include="EF\Level.cs" />
+    <Compile Include="EF\Result.cs" />
     <Compile Include="EF\RMSEntities.cs" />
     <Compile Include="EF\Section.cs" />
     <Compile Include="EF\Semeter.cs" />
     <Compile Include="EF\Student.cs" />
+    <Compile Include="EF\StudentCourseAssign.cs" />
     <Compile Include="EF\User.cs" />
-    <Compile Include="BaseRepository\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CourseRepository.cs" />
+    <Compile Include="Repository\ResultRepository.cs" />
     <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\AspNetUserRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Repository\SectionRepository.cs" />
     <Compile Include="Repository\SemesterRepository.cs" />
@@ -103,6 +118,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

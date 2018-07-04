@@ -31,8 +31,6 @@
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.pvAuth = new Telerik.WinControls.UI.RadPageView();
-            this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.lblError = new Telerik.WinControls.UI.RadLabel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.chkShowPassword = new Telerik.WinControls.UI.RadCheckBox();
@@ -42,14 +40,9 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radPageViewPage3 = new Telerik.WinControls.UI.RadPageViewPage();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pvAuth)).BeginInit();
-            this.pvAuth.SuspendLayout();
-            this.radPageViewPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAuthenticate)).BeginInit();
@@ -80,49 +73,11 @@
             this.radLabel1.TabIndex = 1;
             this.radLabel1.Text = "Note: Provide the authentication detail";
             // 
-            // pvAuth
-            // 
-            this.pvAuth.Controls.Add(this.radPageViewPage1);
-            this.pvAuth.Controls.Add(this.radPageViewPage2);
-            this.pvAuth.Controls.Add(this.radPageViewPage3);
-            this.pvAuth.Font = new System.Drawing.Font("Microsoft Tai Le", 10.5F, System.Drawing.FontStyle.Bold);
-            this.pvAuth.Location = new System.Drawing.Point(-5, 30);
-            this.pvAuth.Name = "pvAuth";
-            this.pvAuth.SelectedPage = this.radPageViewPage1;
-            this.pvAuth.Size = new System.Drawing.Size(473, 270);
-            this.pvAuth.TabIndex = 1;
-            this.pvAuth.Text = "radPageView1";
-            this.pvAuth.ThemeName = "Material";
-            this.pvAuth.ViewMode = Telerik.WinControls.UI.PageViewMode.Backstage;
-            ((Telerik.WinControls.UI.RadPageViewBackstageElement)(this.pvAuth.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Center;
-            ((Telerik.WinControls.UI.RadPageViewBackstageElement)(this.pvAuth.GetChildAt(0))).StripAlignment = Telerik.WinControls.UI.StripViewAlignment.Bottom;
-            ((Telerik.WinControls.UI.RadPageViewBackstageElement)(this.pvAuth.GetChildAt(0))).ItemSizeMode = Telerik.WinControls.UI.PageViewItemSizeMode.EqualHeight;
-            ((Telerik.WinControls.UI.StripViewItemContainer)(this.pvAuth.GetChildAt(0).GetChildAt(0))).MinSize = new System.Drawing.Size(100, 0);
-            // 
-            // radPageViewPage1
-            // 
-            this.radPageViewPage1.Controls.Add(this.lblError);
-            this.radPageViewPage1.Controls.Add(this.txtPassword);
-            this.radPageViewPage1.Controls.Add(this.chkShowPassword);
-            this.radPageViewPage1.Controls.Add(this.btnAuthenticate);
-            this.radPageViewPage1.Controls.Add(this.radLabel3);
-            this.radPageViewPage1.Controls.Add(this.txtUsername);
-            this.radPageViewPage1.Controls.Add(this.radLabel2);
-            this.radPageViewPage1.Controls.Add(this.pictureBox1);
-            this.radPageViewPage1.Image = global::RMS.Properties.Resources.icons8_Access_20px;
-            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(93F, 50F);
-            this.radPageViewPage1.Location = new System.Drawing.Point(6, 5);
-            this.radPageViewPage1.Name = "radPageViewPage1";
-            this.radPageViewPage1.Size = new System.Drawing.Size(462, 210);
-            this.radPageViewPage1.Text = "Login";
-            this.radPageViewPage1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radPageViewPage1.ToolTipText = "Login";
-            // 
             // lblError
             // 
             this.lblError.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(177, 18);
+            this.lblError.Location = new System.Drawing.Point(166, 42);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(2, 2);
             this.lblError.TabIndex = 12;
@@ -130,7 +85,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPassword.Location = new System.Drawing.Point(174, 109);
+            this.txtPassword.Location = new System.Drawing.Point(163, 138);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(256, 23);
             this.txtPassword.TabIndex = 6;
@@ -139,7 +94,7 @@
             // chkShowPassword
             // 
             this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.chkShowPassword.Location = new System.Drawing.Point(332, 140);
+            this.chkShowPassword.Location = new System.Drawing.Point(321, 172);
             this.chkShowPassword.Name = "chkShowPassword";
             this.chkShowPassword.Size = new System.Drawing.Size(103, 18);
             this.chkShowPassword.TabIndex = 10;
@@ -148,7 +103,7 @@
             // 
             // btnAuthenticate
             // 
-            this.btnAuthenticate.Location = new System.Drawing.Point(174, 139);
+            this.btnAuthenticate.Location = new System.Drawing.Point(163, 171);
             this.btnAuthenticate.Name = "btnAuthenticate";
             this.btnAuthenticate.Size = new System.Drawing.Size(83, 36);
             this.btnAuthenticate.TabIndex = 7;
@@ -159,7 +114,7 @@
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radLabel3.Location = new System.Drawing.Point(174, 89);
+            this.radLabel3.Location = new System.Drawing.Point(163, 118);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(83, 22);
             this.radLabel3.TabIndex = 6;
@@ -168,7 +123,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtUsername.Location = new System.Drawing.Point(174, 61);
+            this.txtUsername.Location = new System.Drawing.Point(163, 86);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(256, 23);
             this.txtUsername.TabIndex = 5;
@@ -177,7 +132,7 @@
             // 
             this.radLabel2.Controls.Add(this.radLabel4);
             this.radLabel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radLabel2.Location = new System.Drawing.Point(174, 40);
+            this.radLabel2.Location = new System.Drawing.Point(163, 64);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(87, 22);
             this.radLabel2.TabIndex = 4;
@@ -196,37 +151,28 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RMS.Properties.Resources.login_2;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 173);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // radPageViewPage2
-            // 
-            this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(66F, 50F);
-            this.radPageViewPage2.Location = new System.Drawing.Point(6, 5);
-            this.radPageViewPage2.Name = "radPageViewPage2";
-            this.radPageViewPage2.Size = new System.Drawing.Size(462, 210);
-            this.radPageViewPage2.Text = "New";
-            // 
-            // radPageViewPage3
-            // 
-            this.radPageViewPage3.ItemSize = new System.Drawing.SizeF(72F, 50F);
-            this.radPageViewPage3.Location = new System.Drawing.Point(6, 5);
-            this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(462, 210);
-            this.radPageViewPage3.Text = "Reset";
-            // 
             // AuthForm
             // 
             this.AcceptButton = this.btnAuthenticate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 306);
-            this.Controls.Add(this.pvAuth);
+            this.ClientSize = new System.Drawing.Size(441, 232);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.radPanel1);
+            this.Controls.Add(this.btnAuthenticate);
+            this.Controls.Add(this.radLabel3);
+            this.Controls.Add(this.radLabel2);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -240,15 +186,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auth Form";
             this.ThemeName = "Material";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AuthForm_FormClosed);
             this.Load += new System.EventHandler(this.AuthForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pvAuth)).EndInit();
-            this.pvAuth.ResumeLayout(false);
-            this.radPageViewPage1.ResumeLayout(false);
-            this.radPageViewPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAuthenticate)).EndInit();
@@ -261,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,10 +213,6 @@
         private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
         private Telerik.WinControls.UI.RadPanel radPanel1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadPageView pvAuth;
-        private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
-        private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
-        private Telerik.WinControls.UI.RadPageViewPage radPageViewPage3;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadButton btnAuthenticate;
         private Telerik.WinControls.UI.RadTextBox txtUsername;

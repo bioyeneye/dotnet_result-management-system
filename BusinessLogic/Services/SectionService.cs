@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using DataAccess.BaseRepository;
 using DataAccess.EF;
@@ -18,6 +19,7 @@ namespace BusinessLogic.Services
         SectionModel GetSection(int userId);
         SectionDetail GetDetail(int id);
         bool NameExist(SectionModel unit);
+        bool LevelExit(SectionModel model);
     }
     public class SectionService : ISectionService
     {
@@ -26,7 +28,7 @@ namespace BusinessLogic.Services
 
         public IEnumerable<SectionItem> GetCount()
         {
-            return ProcessQuery(_sectionRepository.Table);
+            return ProcessQuery(_sectionRepository.Table.ToList());
         }
         public SectionService(IUnitOfWorkAsync unitOfWork, ISectionRepository brandRepository)
         {
@@ -40,6 +42,12 @@ namespace BusinessLogic.Services
             try
             {
                 _unitOfWork.BeginTransaction();
+
+                if (model.IsActive)
+                {
+                    UpdateActiveSession();
+                }
+
                 var entity = Mapper.Map<SectionModel, Section>(model);
                 entity.CreatedAt = DateTime.Now;
                 _sectionRepository.Insert(entity);
@@ -51,6 +59,29 @@ namespace BusinessLogic.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        private void UpdateActiveSession()
+        {
+            try
+            {
+
+                var modelToUpdate = _sectionRepository.Table.Where(c => c.IsActive);
+                if (modelToUpdate.Any())
+                {
+                    foreach (var section in modelToUpdate)
+                    {
+                        section.IsActive = false;
+                    }
+                    _sectionRepository.UpdateRange(modelToUpdate);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public void Delete(int id)
         {
             try
@@ -80,7 +111,7 @@ namespace BusinessLogic.Services
         }
         private static IEnumerable<SectionItem> ProcessQuery(IEnumerable<Section> entities)
         {
-            return Mapper.Map<IEnumerable<Section>, IEnumerable<SectionItem>>(entities);
+            return Mapper.Map<IEnumerable<Section>, List<SectionItem>>(entities);
         }
 
         public void Update(SectionModel model, int currentUserId)
@@ -89,6 +120,12 @@ namespace BusinessLogic.Services
             try
             {
                 _unitOfWork.BeginTransaction();
+
+                if (model.IsActive)
+                {
+                    UpdateActiveSession();
+                }
+
                 var userProfile = GetSectionEntity(model.Id);
                 Mapper.Map(model, userProfile);
                 _sectionRepository.Update(userProfile);
@@ -114,6 +151,11 @@ namespace BusinessLogic.Services
         public bool NameExist(SectionModel brand)
         {
             return _sectionRepository.NameExist(brand);
+        }
+
+        public bool LevelExit(SectionModel model)
+        {
+            return _sectionRepository.Table.Any(c => c.LevelId == model.LevelId && c.Id != model.Id);
         }
     }
 }

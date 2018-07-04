@@ -36,6 +36,7 @@ namespace RMS
             {
                 container.Register(reg.Service, reg.Implementation, Lifestyle.Singleton);
             }
+
         }
         private static void ServiceLoad(Container container)
         {
@@ -53,6 +54,7 @@ namespace RMS
             {
                 container.Register(reg.Service, reg.Implementation, Lifestyle.Singleton);
             }
+
         }
         private static void ContextLoad(Container container)
         {

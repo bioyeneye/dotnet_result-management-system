@@ -19,6 +19,10 @@ namespace Model.ViewModel
         public string Answer { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        public bool IsAdmin { get; set; }
+
+        public bool IsActiveEO { get; set; }
     }
 
     public class UserItem : UserModel
