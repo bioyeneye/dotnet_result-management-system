@@ -21,3 +21,29 @@ C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\DataAccess\obj\Deb
 C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\Silveredge\Documents\Visual Studio 2015\Projects\RMS\DataAccess\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\DataAccess.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\DataAccess.pdb
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\AutoMapper.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\CsvHelper.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\EntityFramework.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Model.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Model.pdb
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Model.dll.config
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\AutoMapper.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\CsvHelper.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\EntityFramework.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\obj\Debug\DataAccess.dll
+C:\Project\Undergraduate\resultmanagementsystem\DataAccess\obj\Debug\DataAccess.pdb
