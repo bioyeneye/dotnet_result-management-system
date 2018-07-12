@@ -27,6 +27,7 @@ namespace BusinessLogic.Services
         ResultModel GetByMatricNumberCourseId(string matricNumber, int course);
         List<ResultSingleStudentTemplateDownloadModel> GetStudentResultForSemester(string studentId, int levelId, int semesterId);
         ResultModel GetByMatricNumberCourseCode(string studentMatricNumber, string courseCode);
+        SemesterResultModel StudentSemesterResult(string matricNumber, int level, int semester);
     }
     public class ResultService : IResultService
     {
@@ -232,6 +233,8 @@ namespace BusinessLogic.Services
         }
 
 
+
+
         public ResultItem GetItem(int id)
         {
             var entity = GetResultEntity(id);
@@ -269,6 +272,105 @@ namespace BusinessLogic.Services
         {
             var entity = GetResultEntity(userId);
             return Mapper.Map<Result, ResultModel>(entity);
+        }
+
+        public SemesterResultModel StudentSemesterResult(string matricNumber, int level, int semester)
+        {
+            var result = new SemesterResultModel();
+
+            var resultInSemester = _resultRepository.Table.Where(c =>
+                c.StudentId.Equals(matricNumber, StringComparison.OrdinalIgnoreCase) && c.Course.LevelId == level &&
+                c.Course.SemesterId == semester).ToList();
+
+            if (!resultInSemester.Any()) return null;
+
+            var firstDetail = resultInSemester[0];
+            result.StudentDetail = new ReportStudentDetail
+            {
+                Level = firstDetail.Course?.Level?.Name,
+                Semester = firstDetail.Course?.Semeter.Name,
+                Name = $"{firstDetail.AspNetUser.FirstName} {firstDetail.AspNetUser.LastName}",
+                MatricNumber = firstDetail.AspNetUser.MatricNumber,
+                Session = firstDetail.Course?.Level?.Sections.ToList()[0].Name,
+            };
+
+
+            result.SemesterCourse = resultInSemester.Select(c => new ReportStudentSemesterCourse
+            {
+                Score = c.Score,
+                Unit = c.Course.Unit,
+                CourseTitle = c.Course.Title,
+                CourseCode = c.Course.Code,
+
+            }).ToList();
+
+            int sectionUnit = 0;
+            int sectionScore = 0;
+            int initialSemester = semester;
+            for (int i = level; i >= 1; i--)
+            {
+                for (int j = initialSemester; j > 0; j--)
+                {
+                    var resultInSection = _resultRepository.Table.Where(c =>
+                        c.StudentId.Equals(matricNumber, StringComparison.OrdinalIgnoreCase) && c.Course.LevelId == i &&
+                        c.Course.SemesterId == j).ToList();
+
+                    sectionUnit += resultInSection.Sum(c => c.Course.Unit);
+                    sectionScore += resultInSection.Sum(c => ProcessScore(c.Score) * c.Course.Unit);
+                }
+
+                initialSemester = 2;
+            }
+
+            double cGPA = sectionScore / (double) sectionUnit;
+
+
+            int semesterUnit = resultInSemester.Sum(c => c.Course.Unit);
+            int semesterScore = resultInSemester.Sum(c => ProcessScore(c.Score) * c.Course.Unit);
+            double semesterGP = semesterScore / (double)semesterUnit;
+
+            result.GradeDetail = new ReportGradeDetail
+            {
+                SemesterGPA = semesterGP.ToString("F2"),
+                SemesterTotalPoints = semesterScore.ToString(),
+                SemesterTotalUnits = semesterUnit.ToString(),
+                CummulativeGPA = cGPA.ToString("F2"),
+                CummulativeTotalPoint = sectionScore.ToString(),
+                CummulativeTotalUnits = sectionUnit.ToString()
+            };
+
+            return result;
+        }
+
+        private int ProcessScore(int score)
+        {
+            int grade = 0;
+            if (score >= 70 && score <= 100)
+            {
+                grade = 5;
+            }
+            else if (score > 59 && score < 70)
+            {
+                grade = 4;
+            }
+            else if (score > 49 && score < 60)
+            {
+                grade = 3;
+            }
+            else if (score > 44 && score < 50)
+            {
+                grade = 2;
+            }
+            else if (score >= 40 && score < 45)
+            {
+                grade = 1;
+            }
+            else
+            {
+                grade = 0;
+            }
+
+            return grade;
         }
     }
 }

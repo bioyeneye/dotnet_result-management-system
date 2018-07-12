@@ -1,13 +1,10 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess.EF
+namespace Model.ViewModel
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
     public class ResultModel
     {
         public int Id { get; set; }
@@ -58,7 +55,7 @@ namespace DataAccess.EF
         {
             if (x == null) return false;
             if (y == null) return false;
-            return (x.MatricNumber.Equals(y.MatricNumber, StringComparison.OrdinalIgnoreCase) && x.Score==y.Score);
+            return (x.MatricNumber.Equals(y.MatricNumber, StringComparison.OrdinalIgnoreCase) && x.Score == y.Score);
         }
 
         public int GetHashCode(ResultSingleCourseTemplateDownloadModel obj)
@@ -80,5 +77,73 @@ namespace DataAccess.EF
         {
             return obj.Score.GetHashCode();
         }
+    }
+
+    public class ReportStudentDetail
+    {
+        public string Name { get; set; }
+        public string MatricNumber { get; set; }
+        public string Session { get; set; }
+        public string Semester { get; set; }
+        public string Level { get; set; }
+        public string Program { get; set; } = "BACHELOR OF SCIENCE (COMPUTER SCIENCE)";
+    }
+
+    public class ReportGradeDetail
+    {
+        public string SemesterTotalUnits { get; set; }
+        public string SemesterTotalPoints { get; set; }
+        public string SemesterGPA { get; set; }
+        public string CummulativeTotalUnits { get; set; }
+        public string CummulativeTotalPoint { get; set; }
+        public string CummulativeGPA { get; set; }
+    }
+
+    public class ReportStudentSemesterCourse
+    {
+        public string CourseCode { get; set; }
+        public string CourseTitle { get; set; }
+        public int Unit { get; set; }
+        public int Score { get; set; }
+
+        public char Grade => ProcessGrade(score: Score);
+
+        private char ProcessGrade(int score)
+        {
+            char grade = 'F';
+            if (score >= 70 && score <= 100)
+            {
+                grade = 'A';
+            }
+            else if (score > 59 && score < 70)
+            {
+                grade = 'B';
+            }
+            else if (score > 49 && score < 60)
+            {
+                grade = 'C';
+            }
+            else if (score > 44 && score < 50)
+            {
+                grade = 'D';
+            }
+            else if (score >= 40 && score < 45)
+            {
+                grade = 'E';
+            }
+            else
+            {
+                grade = 'F';
+            }
+
+            return grade;
+        }
+    }
+
+    public class SemesterResultModel
+    {
+        public ReportStudentDetail StudentDetail { get; set; }
+        public List<ReportStudentSemesterCourse> SemesterCourse { get; set; }
+        public ReportGradeDetail GradeDetail { get; set; }
     }
 }

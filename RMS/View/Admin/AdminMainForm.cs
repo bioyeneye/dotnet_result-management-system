@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using RMS.View.Admin.Result;
 using RMS.View.Admin.Result.Process;
 using RMS.View.Admin.Result.View;
+using RMS.View.Reporting;
 using Telerik.WinControls;
 
 namespace RMS.View.Admin
@@ -80,6 +81,11 @@ namespace RMS.View.Admin
         private void btnPerSemesterNonBulk_Click(object sender, EventArgs e)
         {
             ShowChild(new PerSemesterNonBulk(), this);
+        }
+
+        private void radButtonElement1_Click(object sender, EventArgs e)
+        {
+            ShowChild(new ReportingPractise(), this);
         }
     }
 }

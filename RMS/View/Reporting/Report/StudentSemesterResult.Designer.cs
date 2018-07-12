@@ -62,7 +62,6 @@ namespace RMS.View.Reporting.Report
             this.textBox37 = new Telerik.Reporting.TextBox();
             this.textBox43 = new Telerik.Reporting.TextBox();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.textBox38 = new Telerik.Reporting.TextBox();
             textBox1 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -72,7 +71,7 @@ namespace RMS.View.Reporting.Report
             textBox1.Name = "textBox1";
             textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(5.4000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.60000008344650269D));
             textBox1.Style.Font.Bold = true;
-            textBox1.Style.Font.Name = "Roboto";
+            textBox1.Style.Font.Name = "Microsoft Sans Serif";
             textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
             textBox1.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(5D);
             textBox1.Value = "DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING\r\nFACULTY OF ENGINEERING & TECHNOLOGY" +
@@ -82,16 +81,19 @@ namespace RMS.View.Reporting.Report
             // 
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox19.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // textBox21
             // 
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox21.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // textBox23
             // 
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox23.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // pageHeaderSection1
             // 
@@ -118,7 +120,7 @@ namespace RMS.View.Reporting.Report
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.4000008106231689D), Telerik.Reporting.Drawing.Unit.Inch(0.19992147386074066D));
             this.textBox2.Style.Font.Bold = true;
-            this.textBox2.Style.Font.Name = "Roboto";
+            this.textBox2.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.textBox2.Style.Font.Underline = true;
             this.textBox2.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(1D);
@@ -132,8 +134,7 @@ namespace RMS.View.Reporting.Report
             this.panel2,
             this.tblCourseResult,
             this.panel3,
-            this.panel4,
-            this.textBox38});
+            this.panel4});
             this.detail.Name = "detail";
             // 
             // panel1
@@ -152,7 +153,7 @@ namespace RMS.View.Reporting.Report
             this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(1.5894572413799324E-07D));
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.3999999463558197D), Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D));
-            this.textBox3.Style.Font.Name = "Roboto";
+            this.textBox3.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox3.Value = "Date: ";
             // 
@@ -161,7 +162,7 @@ namespace RMS.View.Reporting.Report
             this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.50003939867019653D), Telerik.Reporting.Drawing.Unit.Inch(0.20000012218952179D));
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.39996051788330078D), Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D));
-            this.textBox4.Style.Font.Name = "Roboto";
+            this.textBox4.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox4.Value = "Time:";
             // 
@@ -171,7 +172,7 @@ namespace RMS.View.Reporting.Report
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7999995946884155D), Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D));
             this.textBox5.Style.Font.Bold = true;
-            this.textBox5.Style.Font.Name = "Roboto";
+            this.textBox5.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox5.Value = "=CDate(Today()).toString(\"dddd, dd/MMMM/yyyy\")";
             // 
@@ -181,7 +182,7 @@ namespace RMS.View.Reporting.Report
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.7999988794326782D), Telerik.Reporting.Drawing.Unit.Inch(0.19999997317790985D));
             this.textBox6.Style.Font.Bold = true;
-            this.textBox6.Style.Font.Name = "Roboto";
+            this.textBox6.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox6.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox6.Value = "=CDate(Today()).toString(\"hh:mm tt\")";
             // 
@@ -211,7 +212,7 @@ namespace RMS.View.Reporting.Report
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000394105911255D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox7.Style.Font.Bold = false;
-            this.textBox7.Style.Font.Name = "Roboto Black";
+            this.textBox7.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox7.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox7.Value = "NAME                         :";
             // 
@@ -221,7 +222,7 @@ namespace RMS.View.Reporting.Report
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox8.Style.Font.Bold = false;
-            this.textBox8.Style.Font.Name = "Roboto Black";
+            this.textBox8.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox8.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox8.Value = "MATRIC NUMBER    :";
             // 
@@ -231,7 +232,7 @@ namespace RMS.View.Reporting.Report
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox9.Style.Font.Bold = false;
-            this.textBox9.Style.Font.Name = "Roboto Black";
+            this.textBox9.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox9.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox9.Value = "SESSION                    : ";
             // 
@@ -241,7 +242,7 @@ namespace RMS.View.Reporting.Report
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox10.Style.Font.Bold = false;
-            this.textBox10.Style.Font.Name = "Roboto Black";
+            this.textBox10.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox10.Value = "LEVEL                         : ";
             // 
@@ -251,7 +252,7 @@ namespace RMS.View.Reporting.Report
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox11.Style.Font.Bold = false;
-            this.textBox11.Style.Font.Name = "Roboto Black";
+            this.textBox11.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox11.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox11.Value = "PROGRAM                 : ";
             // 
@@ -261,7 +262,7 @@ namespace RMS.View.Reporting.Report
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox12.Style.Font.Bold = false;
-            this.textBox12.Style.Font.Name = "Roboto Black";
+            this.textBox12.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox12.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox12.Value = "SEMESTER                : ";
             // 
@@ -271,9 +272,9 @@ namespace RMS.View.Reporting.Report
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000394105911255D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox18.Style.Font.Bold = false;
-            this.textBox18.Style.Font.Name = "Roboto Black";
+            this.textBox18.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox18.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
-            this.textBox18.Value = "[=Fields]";
+            this.textBox18.Value = "OYENEYE, BOLAJI";
             // 
             // textBox17
             // 
@@ -281,7 +282,7 @@ namespace RMS.View.Reporting.Report
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox17.Style.Font.Bold = false;
-            this.textBox17.Style.Font.Name = "Roboto Black";
+            this.textBox17.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox17.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox17.Value = "MATRIC NUMBER    :";
             // 
@@ -291,7 +292,7 @@ namespace RMS.View.Reporting.Report
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox16.Style.Font.Bold = false;
-            this.textBox16.Style.Font.Name = "Roboto Black";
+            this.textBox16.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox16.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox16.Value = "SESSION                    : ";
             // 
@@ -301,7 +302,7 @@ namespace RMS.View.Reporting.Report
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox15.Style.Font.Bold = false;
-            this.textBox15.Style.Font.Name = "Roboto Black";
+            this.textBox15.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox15.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox15.Value = "LEVEL                         : ";
             // 
@@ -311,7 +312,7 @@ namespace RMS.View.Reporting.Report
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.899960994720459D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox14.Style.Font.Bold = false;
-            this.textBox14.Style.Font.Name = "Roboto Black";
+            this.textBox14.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox14.Value = "BACHELOR OF SCIENCE (COMPUTER SCIENCE)";
             // 
@@ -321,7 +322,7 @@ namespace RMS.View.Reporting.Report
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3000000715255737D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox13.Style.Font.Bold = false;
-            this.textBox13.Style.Font.Name = "Roboto Black";
+            this.textBox13.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox13.Value = "SEMESTER                : ";
             // 
@@ -367,16 +368,19 @@ namespace RMS.View.Reporting.Report
             // 
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox20.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // textBox22
             // 
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox22.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // textBox24
             // 
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.5333335399627686D), Telerik.Reporting.Drawing.Unit.Inch(0.2395833283662796D));
+            this.textBox24.Style.Font.Name = "Microsoft Sans Serif";
             // 
             // panel3
             // 
@@ -404,7 +408,7 @@ namespace RMS.View.Reporting.Report
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox25.Style.Font.Bold = false;
-            this.textBox25.Style.Font.Name = "Roboto Black";
+            this.textBox25.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox25.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox25.Value = "Semester Total Units                =";
             // 
@@ -414,7 +418,7 @@ namespace RMS.View.Reporting.Report
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox26.Style.Font.Bold = false;
-            this.textBox26.Style.Font.Name = "Roboto Black";
+            this.textBox26.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox26.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox26.Value = "Semester Total Points             =";
             // 
@@ -424,7 +428,7 @@ namespace RMS.View.Reporting.Report
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox27.Style.Font.Bold = false;
-            this.textBox27.Style.Font.Name = "Roboto Black";
+            this.textBox27.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox27.Value = "Semester G.P.A                         =";
             // 
@@ -434,7 +438,7 @@ namespace RMS.View.Reporting.Report
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox28.Style.Font.Bold = false;
-            this.textBox28.Style.Font.Name = "Roboto Black";
+            this.textBox28.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox28.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox28.Value = "Cummulative Total Point          =";
             // 
@@ -444,7 +448,7 @@ namespace RMS.View.Reporting.Report
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox29.Style.Font.Bold = false;
-            this.textBox29.Style.Font.Name = "Roboto Black";
+            this.textBox29.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox29.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox29.Value = "Cummulative G.P.A                   =";
             // 
@@ -454,7 +458,7 @@ namespace RMS.View.Reporting.Report
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.9000000953674316D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox30.Style.Font.Bold = false;
-            this.textBox30.Style.Font.Name = "Roboto Black";
+            this.textBox30.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox30.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox30.Value = "Cummulative Total Units          =";
             // 
@@ -464,7 +468,7 @@ namespace RMS.View.Reporting.Report
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox31.Style.Font.Bold = false;
-            this.textBox31.Style.Font.Name = "Roboto Black";
+            this.textBox31.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox31.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox31.Value = "23";
             // 
@@ -474,7 +478,7 @@ namespace RMS.View.Reporting.Report
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox32.Style.Font.Bold = false;
-            this.textBox32.Style.Font.Name = "Roboto Black";
+            this.textBox32.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox32.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox32.Value = "88";
             // 
@@ -484,7 +488,7 @@ namespace RMS.View.Reporting.Report
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox33.Style.Font.Bold = false;
-            this.textBox33.Style.Font.Name = "Roboto Black";
+            this.textBox33.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox33.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox33.Value = "3.83";
             // 
@@ -494,7 +498,7 @@ namespace RMS.View.Reporting.Report
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox34.Style.Font.Bold = false;
-            this.textBox34.Style.Font.Name = "Roboto Black";
+            this.textBox34.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox34.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox34.Value = "88";
             // 
@@ -504,7 +508,7 @@ namespace RMS.View.Reporting.Report
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox35.Style.Font.Bold = false;
-            this.textBox35.Style.Font.Name = "Roboto Black";
+            this.textBox35.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox35.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox35.Value = "3.83";
             // 
@@ -514,7 +518,7 @@ namespace RMS.View.Reporting.Report
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.60000020265579224D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox36.Style.Font.Bold = false;
-            this.textBox36.Style.Font.Name = "Roboto Black";
+            this.textBox36.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox36.Value = "23";
             // 
@@ -534,7 +538,7 @@ namespace RMS.View.Reporting.Report
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.7000000476837158D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox37.Style.Font.Bold = false;
-            this.textBox37.Style.Font.Name = "Roboto Black";
+            this.textBox37.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox37.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox37.Value = "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
             // 
@@ -544,7 +548,7 @@ namespace RMS.View.Reporting.Report
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0999995470046997D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
             this.textBox43.Style.Font.Bold = false;
-            this.textBox43.Style.Font.Name = "Roboto Black";
+            this.textBox43.Style.Font.Name = "Microsoft Sans Serif";
             this.textBox43.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             this.textBox43.Value = "H O D\' S Signature ";
             // 
@@ -552,16 +556,6 @@ namespace RMS.View.Reporting.Report
             // 
             this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.20000045001506805D);
             this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // textBox38
-            // 
-            this.textBox38.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.20003931224346161D), Telerik.Reporting.Drawing.Unit.Inch(2.7999999523162842D));
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.1999607086181641D), Telerik.Reporting.Drawing.Unit.Inch(0.15000000596046448D));
-            this.textBox38.Style.Font.Bold = false;
-            this.textBox38.Style.Font.Name = "Roboto Black";
-            this.textBox38.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
-            this.textBox38.Value = "=CourseCode";
             // 
             // StudentSemesterResult
             // 
@@ -635,6 +629,5 @@ namespace RMS.View.Reporting.Report
         private Telerik.Reporting.Panel panel4;
         private Telerik.Reporting.TextBox textBox37;
         private Telerik.Reporting.TextBox textBox43;
-        private Telerik.Reporting.TextBox textBox38;
     }
 }

@@ -35,7 +35,6 @@ C:\Project\Undergraduate\resultmanagementsystem\Model\bin\Debug\EntityFramework.
 C:\Project\Undergraduate\resultmanagementsystem\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Project\Undergraduate\resultmanagementsystem\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Project\Undergraduate\resultmanagementsystem\Model\bin\Debug\Newtonsoft.Json.xml
-C:\Project\Undergraduate\resultmanagementsystem\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Project\Undergraduate\resultmanagementsystem\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Project\Undergraduate\resultmanagementsystem\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Project\Undergraduate\resultmanagementsystem\Model\obj\Debug\Model.dll

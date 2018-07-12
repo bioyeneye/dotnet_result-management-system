@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic.Services;
 using DataAccess.EF;
 using log4net;
+using Model.ViewModel;
 using RMS.Extension;
 using RMS.View.Admin.Result.Process;
 using Telerik.WinControls;

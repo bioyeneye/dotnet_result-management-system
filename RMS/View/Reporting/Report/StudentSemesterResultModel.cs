@@ -32,9 +32,14 @@ namespace RMS.View.Reporting.Report
         private char _grade;
         public char Grade
         {
-            get { return _grade;}
-            set { _grade = ProcessGrade(Score); }
+            get => _grade;
+            set
+            {
+                _grade = value;
+                _grade = ProcessGrade(Score);
+            }
         }
+
         private char ProcessGrade(int score)
         {
             char grade = 'F';

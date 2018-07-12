@@ -1,25 +1,15 @@
 ﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogic.Services;
-using DataAccess.BaseRepository;
-using DataAccess.EF;
-using DataAccess.Repository;
 using log4net.Config;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.ReportingServices.Interfaces;
+using Microsoft.Reporting.WinForms;
 using RMS.Model;
-using RMS.View;
 using RMS.View.Admin;
 using RMS.View.Reporting;
-using RMS.View.SuperAdmin;
-using RMS.View.SuperAdmin.Course;
 using SimpleInjector;
+
 namespace RMS
 {
-    static partial class Program
+    static class Program
     {
         public static Container container;
 
@@ -36,7 +26,7 @@ namespace RMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(container.GetInstance<AuthForm>());
-            Application.Run(container.GetInstance<ReportingPractise>());
+            Application.Run(container.GetInstance<EoMainForm>());
         }
 
 

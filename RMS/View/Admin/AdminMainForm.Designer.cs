@@ -36,6 +36,7 @@
             this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnResultSingleStudent = new Telerik.WinControls.UI.RadButtonElement();
             this.btnResultSingleSemester = new Telerik.WinControls.UI.RadButtonElement();
+            this.btnPerSemesterNonBulk = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup3 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btnResultStudentsCourse = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup6 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -52,7 +53,6 @@
             this.ribbonTab4 = new Telerik.WinControls.UI.RibbonTab();
             this.btnStudent = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
-            this.btnPerSemesterNonBulk = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -128,6 +128,12 @@
             this.btnResultSingleSemester.Name = "btnResultSingleSemester";
             this.btnResultSingleSemester.Text = "Per Course";
             this.btnResultSingleSemester.Click += new System.EventHandler(this.btnResultSingleSemester_Click);
+            // 
+            // btnPerSemesterNonBulk
+            // 
+            this.btnPerSemesterNonBulk.Name = "btnPerSemesterNonBulk";
+            this.btnPerSemesterNonBulk.Text = "Per Semester(Non Bulk)";
+            this.btnPerSemesterNonBulk.Click += new System.EventHandler(this.btnPerSemesterNonBulk_Click);
             // 
             // radRibbonBarGroup3
             // 
@@ -206,6 +212,7 @@
             // 
             this.radButtonElement1.Name = "radButtonElement1";
             this.radButtonElement1.Text = "Student";
+            this.radButtonElement1.Click += new System.EventHandler(this.radButtonElement1_Click);
             // 
             // radButtonElement2
             // 
@@ -235,15 +242,9 @@
             this.radButtonElement3.Text = "List Student";
             this.radButtonElement3.UseCompatibleTextRendering = false;
             // 
-            // btnPerSemesterNonBulk
-            // 
-            this.btnPerSemesterNonBulk.Name = "btnPerSemesterNonBulk";
-            this.btnPerSemesterNonBulk.Text = "Per Semester(Non Bulk)";
-            this.btnPerSemesterNonBulk.Click += new System.EventHandler(this.btnPerSemesterNonBulk_Click);
-            // 
             // EoMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 501);
             this.Controls.Add(this.radStatusStrip1);

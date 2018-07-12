@@ -58,7 +58,7 @@
             // 
             this.radRibbonBar1.ExitButton.Text = "Exit";
             this.radRibbonBar1.ExitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.radRibbonBar1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.radRibbonBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
             // 
@@ -78,8 +78,8 @@
             // 
             // ribbonTab1
             // 
-            this.ribbonTab1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1,
             this.radRibbonBarGroup2});
@@ -89,7 +89,7 @@
             // 
             // radRibbonBarGroup1
             // 
-            this.radRibbonBarGroup1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.radRibbonBarGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radButtonElement3,
             this.radButtonElement4});
@@ -109,7 +109,7 @@
             // 
             // radRibbonBarGroup2
             // 
-            this.radRibbonBarGroup2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.radRibbonBarGroup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radRibbonBarGroup2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btnListCourse,
             this.radButtonElement1,
@@ -130,15 +130,15 @@
             // 
             // radButtonElement2
             // 
-            this.radButtonElement2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.radButtonElement2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.radButtonElement2.Name = "radButtonElement2";
             this.radButtonElement2.Text = "Session";
             this.radButtonElement2.Click += new System.EventHandler(this.radButtonElement2_Click);
             // 
             // ribbonTab2
             // 
-            this.ribbonTab2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup3});
             this.ribbonTab2.Name = "ribbonTab2";
@@ -160,7 +160,7 @@
             // 
             // ribbonTab3
             // 
-            this.ribbonTab3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonTab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Name = "ribbonTab3";
             this.ribbonTab3.Text = "Help";
@@ -168,11 +168,11 @@
             // 
             // SuperAdminMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 413);
             this.Controls.Add(this.radRibbonBar1);
-            this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.IsMdiContainer = true;
             this.MainMenuStrip = null;
             this.Name = "SuperAdminMainForm";

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.btnDownloadTemplate = new Telerik.WinControls.UI.RadButton();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.beCourseTemplate = new Telerik.WinControls.UI.RadBrowseEditor();
             this.lblError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpload = new Telerik.WinControls.UI.RadButton();
@@ -39,17 +41,15 @@
             this.ddlSemester = new Telerik.WinControls.UI.RadDropDownList();
             this.label4 = new System.Windows.Forms.Label();
             this.lblFolderName = new System.Windows.Forms.Label();
-            this.beCourseTemplate = new Telerik.WinControls.UI.RadBrowseEditor();
             this.gridCourse = new Telerik.WinControls.UI.RadGridView();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnDownloadTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.beCourseTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlSemester)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beCourseTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCourse.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
@@ -68,6 +68,8 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGroupBox1.Controls.Add(this.label2);
             this.radGroupBox1.Controls.Add(this.beCourseTemplate);
             this.radGroupBox1.Controls.Add(this.lblError);
@@ -85,24 +87,40 @@
             this.radGroupBox1.Text = "Upload Guide";
             this.radGroupBox1.ThemeName = "TelerikMetro";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(434, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Select File: ";
+            // 
+            // beCourseTemplate
+            // 
+            this.beCourseTemplate.Location = new System.Drawing.Point(434, 81);
+            this.beCourseTemplate.Name = "beCourseTemplate";
+            this.beCourseTemplate.Size = new System.Drawing.Size(203, 21);
+            this.beCourseTemplate.TabIndex = 23;
+            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(11, 46);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(10, 13);
+            this.lblError.Size = new System.Drawing.Size(12, 17);
             this.lblError.TabIndex = 22;
             this.lblError.Text = ".";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato Black", 9F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(9, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(487, 15);
+            this.label1.Size = new System.Drawing.Size(583, 18);
             this.label1.TabIndex = 21;
             this.label1.Text = "Note: Kindly select the desired option from the drop downs, the right semester an" +
     "d level.";
@@ -121,7 +139,7 @@
             this.ddLevel.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.ddLevel.Location = new System.Drawing.Point(223, 81);
             this.ddLevel.Name = "ddLevel";
-            this.ddLevel.Size = new System.Drawing.Size(205, 20);
+            this.ddLevel.Size = new System.Drawing.Size(205, 24);
             this.ddLevel.TabIndex = 19;
             this.ddLevel.Text = "radDropDownList1";
             // 
@@ -130,7 +148,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(223, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "Level: ";
             // 
@@ -139,7 +157,7 @@
             this.ddlSemester.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.ddlSemester.Location = new System.Drawing.Point(12, 81);
             this.ddlSemester.Name = "ddlSemester";
-            this.ddlSemester.Size = new System.Drawing.Size(205, 20);
+            this.ddlSemester.Size = new System.Drawing.Size(205, 24);
             this.ddlSemester.TabIndex = 17;
             this.ddlSemester.Text = "radDropDownList1";
             // 
@@ -148,37 +166,31 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "Semester:";
             // 
             // lblFolderName
             // 
             this.lblFolderName.AutoSize = true;
-            this.lblFolderName.Font = new System.Drawing.Font("Lato Black", 7.5F);
+            this.lblFolderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
             this.lblFolderName.ForeColor = System.Drawing.Color.Navy;
             this.lblFolderName.Location = new System.Drawing.Point(12, 49);
             this.lblFolderName.Name = "lblFolderName";
-            this.lblFolderName.Size = new System.Drawing.Size(0, 12);
+            this.lblFolderName.Size = new System.Drawing.Size(0, 16);
             this.lblFolderName.TabIndex = 22;
-            // 
-            // beCourseTemplate
-            // 
-            this.beCourseTemplate.Location = new System.Drawing.Point(434, 81);
-            this.beCourseTemplate.Name = "beCourseTemplate";
-            this.beCourseTemplate.Size = new System.Drawing.Size(203, 20);
-            this.beCourseTemplate.TabIndex = 23;
             // 
             // gridCourse
             // 
-            this.gridCourse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridCourse.Location = new System.Drawing.Point(14, 189);
             // 
             // 
             // 
             this.gridCourse.MasterTemplate.PageSize = 50;
-            this.gridCourse.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.gridCourse.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gridCourse.Name = "gridCourse";
             this.gridCourse.Size = new System.Drawing.Size(726, 384);
             this.gridCourse.TabIndex = 23;
@@ -194,18 +206,9 @@
             this.radButton1.Text = "Proceed...";
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(434, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Select File: ";
-            // 
             // ProcessBulkForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 606);
             this.Controls.Add(this.radButton1);
@@ -213,21 +216,23 @@
             this.Controls.Add(this.lblFolderName);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.btnDownloadTemplate);
-            this.Font = new System.Drawing.Font("Lato Black", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ProcessBulkForm";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowIcon = false;
             this.Text = "Bulk Course";
             ((System.ComponentModel.ISupportInitialize)(this.btnDownloadTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.beCourseTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlSemester)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beCourseTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCourse.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
